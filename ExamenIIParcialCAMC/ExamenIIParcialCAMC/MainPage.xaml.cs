@@ -57,9 +57,16 @@ namespace ExamenIIParcialCAMC
             await Navigation.PushAsync(new Alumnos());
         }
 
-        private async void FiltroListado(object sender, EventArgs e)
+        private async void Reporte(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Lectivo());
+            await Navigation.PushAsync(new Reporte());
         }
+
+        private async void Parentezco(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Parentezco());
+        }
+
+      
     }
 }

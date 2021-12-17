@@ -17,8 +17,7 @@ namespace ExamenIIParcialCAMC
         {
             InitializeComponent();
         }
-
-        private async void traerEstudiantes(string rne)
+        public async void traerEstudiantes(string rne)
         {
             try
             {
@@ -34,14 +33,14 @@ namespace ExamenIIParcialCAMC
                 await DisplayAlert("Mensaje de Error", e.Message.ToString(), "OK");
             }
         }
-
         private void BuscarAlumno(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtAlumno.Text))
             {
-
+                
             }
             else traerEstudiantes(txtAlumno.Text);
         }
+        
     }
 }

@@ -6,14 +6,13 @@
         <StackLayout>
 
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-                <Label Text="EXAMEN II Parcial Camilo Molina" HorizontalTextAlignment="Center" TextColor="Gold" FontSize="36"/>
+                <Label Text="EXAMEN III Parcial Camilo Molina" HorizontalTextAlignment="Center" TextColor="Gold" FontSize="36"/>
             </Frame>
 
 
-            <Button Text="Buscar un Alumno" Clicked="BuscarAlumno"></Button>
-            <Button Text="Buscar un Año Lectivo" Clicked="FiltroListado"></Button>
-
-
+            <Button Text="Buscar Perfil Alumno" Clicked="BuscarAlumno"></Button>
+            <Button Text="Abrir en Nav" Clicked="Reporte"></Button>
+            <Button Text="Actualizar Parentesco" Clicked="Parentezco"></Button>
 
 
         </StackLayout>

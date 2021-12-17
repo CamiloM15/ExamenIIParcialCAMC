@@ -15,5 +15,13 @@ namespace ExamenIIParcialCAMC.Classes
         public string alumno_genero { get; set; }
         public string alumno_fnac { get; set; }
 
+        public string aniol_anio { get; set; }
+
+        public string grado_nombre { get; set; }
+        public string nombreParentezco { get; set; }
+        public string tipoParentezco { get; set; }
+        public string TelefonoParentezco { get; set; }
+
+
     }
 }

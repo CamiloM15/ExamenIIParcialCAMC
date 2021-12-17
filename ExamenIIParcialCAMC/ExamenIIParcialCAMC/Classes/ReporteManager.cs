@@ -5,10 +5,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace ExamenIIParcialCAMC.Classes
 {
-    class LectivoManager
+    class ReporteManager
     {
         private HttpClient getCliente()
         {
@@ -18,16 +17,17 @@ namespace ExamenIIParcialCAMC.Classes
             return client;
         }
 
-        public async Task<IEnumerable<Lectivo>> TraerLista(String alectivo)
+
+        public async Task<IEnumerable<Reporte>> VerReporte(string rne)
         {
             HttpClient client = getCliente();
-            var res = await client.GetAsync(App.url + "verLectivo.php?alectivo=" + alectivo);
+            var res = await client.GetAsync(App.url + "verReporte.php?rne=" + rne);
             if (res.IsSuccessStatusCode)
             {
                 string content = await res.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<IEnumerable<Lectivo>>(content);
+                return JsonConvert.DeserializeObject<IEnumerable<Reporte>>(content);
             }
-            return Enumerable.Empty<Lectivo>();
+            return Enumerable.Empty<Reporte>();
         }
     }
 }

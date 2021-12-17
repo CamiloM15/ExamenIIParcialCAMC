@@ -1,19 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ExamenIIParcialCAMC.Alumnos">
+             x:Class="ExamenIIParcialCAMC.Reporte">
     <ContentPage.Content>
-
         <StackLayout>
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-                <Label Text="Perfil Alumno" HorizontalTextAlignment="Center" TextColor="Gold" FontSize="25"/>
+                <Label Text="Reporte Alumno" HorizontalTextAlignment="Center" TextColor="Gold" FontSize="25"/>
             </Frame>
 
-
             <Label Text="RNE del Alumno: "></Label>
-            <Entry x:Name="txtAlumno"></Entry>
-
-            <Button Text="Generar" Clicked="BuscarAlumno"></Button>
+            <Entry x:Name="txtAlumno_rne"></Entry>
+            <Button Text="Generar Reporte" Clicked="ReporteClick"></Button>
 
             <ListView x:Name="lstEstudents" HasUnevenRows="true">
                 <ListView.ItemTemplate>
@@ -24,22 +21,29 @@
                                 <Label Text="{Binding alumno_rne}" TextColor="Indigo"></Label>
                                 <Label Text="Primer Nombre" TextColor="Black"></Label>
                                 <Label Text="{Binding alumno_nombre1}" TextColor="Indigo"></Label>
-                                <Label Text="Segundo Nombre" TextColor="Black"></Label>
-                                <Label Text="{Binding alumno_nombre2}" TextColor="Indigo"></Label>
                                 <Label Text="Primer Apellido" TextColor="Black"></Label>
                                 <Label Text="{Binding alumno_ape1}" TextColor="Indigo"></Label>
-                                <Label Text="Segundo Apellido" TextColor="Black"></Label>
-                                <Label Text="{Binding alumno_ape2}" TextColor="Indigo"></Label>
                                 <Label Text="Genero" TextColor="Black"></Label>
                                 <Label Text="{Binding alumno_genero}" TextColor="Indigo"></Label>
                                 <Label Text="FNAC" TextColor="Black"></Label>
                                 <Label Text="{Binding alumno_fnac}" TextColor="Indigo"></Label>
+                                <Label Text="Año Lectivo" TextColor="Black"></Label>
+                                <Label Text="{Binding aniol_anio}" TextColor="Indigo"></Label>
+                                <Label Text="Grado" TextColor="Black"></Label>
+                                <Label Text="{Binding grado_nombre}" TextColor="Indigo"></Label>
+                                <Label Text="Cedula Parentezco" TextColor="Black"></Label>
+                                <Label Text="{Binding idParentezco}" TextColor="Indigo"></Label>
+                                <Label Text="Nombre Parentezco" TextColor="Black"></Label>
+                                <Label Text="{Binding nombreParentezco}" TextColor="Indigo"></Label>
+                                <Label Text="Telefono" TextColor="Black"></Label>
+                                <Label Text="{Binding TelefonoParentezco}" TextColor="Indigo"></Label>
+                                <Label Text="Tipo Parentezco" TextColor="Black"></Label>
+                                <Label Text="{Binding tipoParentesco}" TextColor="Indigo"></Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
-
     </ContentPage.Content>
 </ContentPage>

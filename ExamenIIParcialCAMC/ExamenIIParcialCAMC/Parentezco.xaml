@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenIIParcialCAMC.Parentezco">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Información de Parentezco" HorizontalTextAlignment="Center" TextColor="Gold" FontSize="25"/>
+            </Frame>
+
+
+            <!--<Label Text="Cedula de Parentezco: "></Label>-->
+            <Entry x:Name="txtIdParentezco" Placeholder="Cedula parentezco"></Entry>
+            <Entry x:Name="txtNombreParentezco" Placeholder="Nombre de parentezco"></Entry>
+            <Entry x:Name="txtTelefonoParentezco" Placeholder="Telefono de parentezco"></Entry>
+            <Entry x:Name="txtDireccion" Placeholder="Direccion"></Entry>
+            <Picker x:Name="cbotipo" Title="Seleccione el tipo de parentesco"></Picker>
+            <Entry x:Name="txtAlumnoRne" Placeholder="RNE de alumno"></Entry>
+
+            <Button Text="Actualizar" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

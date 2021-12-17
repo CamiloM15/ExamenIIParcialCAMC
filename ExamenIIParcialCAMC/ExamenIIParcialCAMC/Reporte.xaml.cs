@@ -11,37 +11,38 @@ using Xamarin.Forms.Xaml;
 namespace ExamenIIParcialCAMC
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Lectivo : ContentPage
+    public partial class Reporte : ContentPage
     {
-        public Lectivo()
+        public Reporte()
         {
             InitializeComponent();
         }
-        private async void traerLista(String alectivo)
+
+        public async void VerReporte(string rne1)
         {
-            
             try
             {
-                LectivoManager manager = new LectivoManager();
-                var res = await manager.TraerLista(alectivo);
+                ReporteManager manager = new ReporteManager();
+                var res = await manager.VerReporte(rne1);
                 if (res != null)
                 {
-                    lstEstudent.ItemsSource = res;
+                    lstEstudents.ItemsSource = res;
                 }
+                
             }
             catch (Exception e)
             {
                 await DisplayAlert("Mensaje de Error", e.Message.ToString(), "OK");
             }
         }
-
-        private void ListadoLectivo(object sender, EventArgs e)
+        private void ReporteClick(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtAlectivo.Text))
+            if (string.IsNullOrEmpty(txtAlumno_rne.Text))
             {
 
             }
-            else traerLista(txtAlectivo.Text);
+            else VerReporte(txtAlumno_rne.Text);
         }
+
     }
 }
